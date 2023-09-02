@@ -81,7 +81,24 @@ console.log(timediff / 1000 / 60) // 1440 (min)
 console.log(timediff / 1000 / 60 / 60) // 24 (hour)
 console.log(timediff / 1000 / 60 / 60 / 24) // 1 (date)
 
-
+//YYYY-MM-DDThh:mm:ss형식 말고도 날짜를 표현하는 다양한 방식의 문자열이 있습니다.
 let date1 = new Date('12/15/1999 05:25:30');
 let date2 = new Date('December 15, 1999 05:25:30');
 let date3 = new Date('Dec 15 1999 05:25:30');
+//하지만 이런 방식을 사용하다보면 브라우저나, 컴퓨터를 사용하는 위치의 시간대에 따라 서로 다른 결과 값이 나올 수도 있기 때문에 적어도 IETF 호환 RFC 2822 타임스탬프와 ISO8601의 한 버전의 형식을 준수하는 문자열로 Date객체를 생성하는 것을 권장드립니다!
+
+
+>> 예제
+
+// let today = new Date(2112, 7, 24);
+// let jaeSangStart = new Date(2109, 6, 1);
+
+// function workDayCalc(startDate) {
+//   // 여기에 코드를 작성하세요
+//   let timeDiff = today.getTime() - startDate.getTime();
+//   let dayDiff = timeDiff / 1000 / 60 / 60 / 24;
+
+//   console.log(`오늘은 입사한 지 ${dayDiff + 1}일째 되는 날 입니다.`);
+// }
+
+// workDayCalc(jaeSangStart);
